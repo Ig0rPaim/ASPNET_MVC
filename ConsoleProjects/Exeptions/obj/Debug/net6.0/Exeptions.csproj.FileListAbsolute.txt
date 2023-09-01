@@ -1,0 +1,15 @@
+C:\Users\ioliveira\Documents\C#2\Exeptions\bin\Debug\net6.0\Exeptions.exe
+C:\Users\ioliveira\Documents\C#2\Exeptions\bin\Debug\net6.0\Exeptions.deps.json
+C:\Users\ioliveira\Documents\C#2\Exeptions\bin\Debug\net6.0\Exeptions.runtimeconfig.json
+C:\Users\ioliveira\Documents\C#2\Exeptions\bin\Debug\net6.0\Exeptions.dll
+C:\Users\ioliveira\Documents\C#2\Exeptions\bin\Debug\net6.0\Exeptions.pdb
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.csproj.AssemblyReference.cache
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.AssemblyInfoInputs.cache
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.AssemblyInfo.cs
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.csproj.CoreCompileInputs.cache
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.dll
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\refint\Exeptions.dll
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.pdb
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\Exeptions.genruntimeconfig.cache
+C:\Users\ioliveira\Documents\C#2\Exeptions\obj\Debug\net6.0\ref\Exeptions.dll
