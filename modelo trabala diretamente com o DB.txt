@@ -1,0 +1,5 @@
+modelo trabala diretamente com o DB
+
+view parte final, a tela
+
+controller intermedia a relação dos modelos e das views

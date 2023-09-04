@@ -1,7 +1,65 @@
-﻿@{
+﻿@model ASPNET_MVC.Models.Pessoa;
+
+@{
     ViewData["Title"] = "Index";
 }
 
 <h2>Index</h2>
 
 <p>Hello from our View Template!</p>
+
+<br />
+<br />
+@*
+<p> @ViewData["PessoaId"] </p>
+<p> @ViewData["Nome"] </p>
+<p> @ViewData["Tipo"] </p>*@
+
+@*<p> @ViewBag.Id </p>
+<p> @ViewBag.Nome </p>
+<p> @ViewBag.Tipo </p>*@
+@*
+<p> @Model.PessoaId </p>
+<p> @Model.Nome </p>
+<p> @Model.Tipo </p>
+*@
+<p> View Tipada </p>
+
+
+@using (Html.BeginForm("List", "Home_1", FormMethod.Post))
+{
+    
+
+@*<form action="Home_1/List" method="post">*@
+    <fildset>
+        <legend>
+            Informações Pessoais
+        </legend>
+    </fildset> 
+    <div>
+        @Html.LabelFor(x => x.PessoaId)
+    </div>
+    <div>
+        @*<input type="number" value="@Model.PessoaId" name="PessoaId" />*@
+        @Html.EditorFor(x => x.PessoaId)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Nome)
+    </div>
+    <div>
+        @*<input type="text" value="@Model.Nome" name="Nome" />*@
+        @Html.EditorFor(x => x.Nome)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Tipo)
+    </div>
+    <div>
+        @*<input type="text" value="@Model.Tipo" name="Tipo" />*@
+        @Html.EditorFor(x => x.Tipo)
+    </div>
+    <br />
+    <p><input type="submit" value="Enviar" /></p>
+@*</form>*@
+}

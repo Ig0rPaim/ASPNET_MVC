@@ -16,3 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+a{
+    color: brown;
+    padding: 2px;
+
+}
+
+h2{
+    color: blue;
+}

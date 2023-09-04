@@ -1,0 +1,50 @@
+﻿@model ASPNET_MVC.Models.Usuario
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Usuário</h2>
+
+<p>Bem vindo, arrombado!</p>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>
+            Dados dos Usuário
+        </legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Observacoes)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Observacoes)
+            @Html.ValidationMessageFor(model => model.Observacoes)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Idade)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Idade)
+            @Html.ValidationMessageFor(model => model.Idade)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+    </fieldset>
+}
