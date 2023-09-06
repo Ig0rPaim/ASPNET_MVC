@@ -1,0 +1,52 @@
+Para conectar-se a um servidor SQL Server usando o Entity Framework Core (EF Core) via DbContext em C#, siga os seguintes passos:
+
+1. **Instale o Entity Framework Core (EF Core)**:
+   Certifique-se de que você tenha o EF Core instalado em seu projeto. Você pode instalá-lo via NuGet Package Manager usando o comando:
+
+   ```
+   Install-Package Microsoft.EntityFrameworkCore
+   ```
+
+2. **Instale o provedor SQL Server**:
+   Você também precisará instalar o provedor SQL Server para o EF Core. Use o seguinte comando:
+
+   ```
+   Install-Package Microsoft.EntityFrameworkCore.SqlServer
+   ```
+
+3. **Defina sua classe DbContext**:
+   Crie uma classe que herde de `DbContext`. Esta classe será usada para se conectar ao banco de dados e definir as tabelas e relações.
+
+   ```csharp
+   using Microsoft.EntityFrameworkCore;
+
+   public class SeuDbContext : DbContext
+   {
+       public DbSet<SuaClasse> NomeDaTabela { get; set; }
+
+       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+       {
+           // Configure a string de conexão com o SQL Server
+           optionsBuilder.UseSqlServer("SuaStringDeConexão");
+       }
+   }
+   ```
+
+4. **Configure a string de conexão**:
+   Substitua `"SuaStringDeConexão"` pela string de conexão apropriada para o seu banco de dados SQL Server. A string de conexão deve incluir detalhes como o servidor, o nome do banco de dados, a autenticação, etc.
+
+5. **Crie e use o contexto**:
+   Agora você pode criar uma instância do seu DbContext e usá-la para interagir com o banco de dados. Por exemplo:
+
+   ```csharp
+   using (var dbContext = new SeuDbContext())
+   {
+       var entidade = new SuaClasse { /* ... preencha com os dados apropriados ... */ };
+       dbContext.NomeDaTabela.Add(entidade);
+       dbContext.SaveChanges();
+   }
+   ```
+
+Certifique-se de substituir `SuaClasse` pelo nome da sua classe de modelo e `NomeDaTabela` pelo nome da tabela no banco de dados que você deseja acessar.
+
+Esses são os passos básicos para conectar-se ao SQL Server via DbContext em C# usando o Entity Framework Core. Certifique-se de configurar corretamente sua string de conexão e definir as entidades e relacionamentos no DbContext de acordo com o seu banco de dados.

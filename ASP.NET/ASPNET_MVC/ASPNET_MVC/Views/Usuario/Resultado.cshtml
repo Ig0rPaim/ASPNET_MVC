@@ -1,5 +1,67 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ASPNET_MVC.Models.Usuario
+
 @{
+    ViewData["Title"] = "Resultado";
+}
+
+<h2>Resultado</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>
+            Usuário cadastrado
+        </legend>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Observacoes)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Idade)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Idade)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Login)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Login)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Senha)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Senha)
+        </div>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.ConfirmarSenha)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.ConfirmarSenha)
+        </div>
+
+        <p>@Html.ActionLink("voltar", "Usuario");</p>
+    </fieldset>
 }
