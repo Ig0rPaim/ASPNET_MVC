@@ -1,7 +1,10 @@
-using BuilderAux_MVC.Models;
+using BuilderAux_MVC.Data;
+using BuilderAux_MVC.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AplicationDbContext>();
+builder.Services.AddDbContext<AplicationDbContextUsuario>();
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

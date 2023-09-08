@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BuilderAux_MVC.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace BuilderAux_MVC.Models
+namespace BuilderAux_MVC.Data
 {
     public class AplicationDbContext : DbContext
     {
@@ -9,7 +10,11 @@ namespace BuilderAux_MVC.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=03-ASTIN-03;User Id=SEDE\\ioliveira;Database=Estoque;Integrated Security=SSPI;TrustServerCertificate=True");
+            IConfigurationRoot Configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+            optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DatabaseEscopo"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
