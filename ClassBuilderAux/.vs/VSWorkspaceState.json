@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\BuilderAux_MVC",
-    "\\BuilderAux_MVC\\Rotinas",
-    "\\BuilderAux_MVC\\Rotinas\\Entrada_Saida_de_Materiais"
+    "\\BuilderAux_MVC\\Rotinas\\Entrada_Saida_de_Materiais",
+    "\\BuilderAux_MVC\\Views"
   ],
-  "SelectedNode": "\\BuilderAux_MVC\\Rotinas\\Entrada_Saida_de_Materiais\\EntradaDeMateriais.cs",
+  "SelectedNode": "\\BuilderAux_MVC\\Views\\Shared",
   "PreviewInSolutionExplorer": false
 }

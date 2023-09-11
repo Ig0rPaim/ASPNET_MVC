@@ -1,0 +1,60 @@
+﻿@model List<UsuarioModel>
+
+@{
+    ViewData["Title"] = "Pagina Inicial";
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Listagem de Contatos</h1>
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+    <br />
+    <a role="button" class="btn btn-primary" asp-controller="User" asp-action="Cadastrar">Adicionar Novo Usuário</a>
+</div>
+<br />
+<table class="table table-dark table-striped-columns" id="table-Users">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Editar/Apagar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach(UsuarioModel User in Model)
+            {
+                <tr>
+                    <th scope="row">@User.Id</th>
+                    <td>@User.Nome</td>
+                    <td>@User.Email</td>
+                    <td>@User.Phone</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a role="button" class="btn btn-primary" asp-route-id="@User.Id" asp-controller="User" asp-action="Editar">Editar</a>
+                            <a role="button" class="btn btn-danger" asp-route-id="@User.Id" asp-controller="User" asp-action="ApagarConfimacao">Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
