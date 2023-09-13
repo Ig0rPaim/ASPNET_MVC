@@ -13,7 +13,10 @@ namespace BuilderAux_MVC.Models
         [EmailAddress(ErrorMessage ="O email não está em um formato válido")]
         public string Email { get; set; }
         [Required(ErrorMessage = "Digite o telefone do Usuário")]
-        [Phone(ErrorMessage ="O telefone informado não é válido")]
+        [Phone(ErrorMessage ="Formato de telefone invalido")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:(##) ####-####}")]
+        [RegularExpression(@"^\d{11}$", ErrorMessage = "Formato de telefone inválido, Digite o DDD e os outros nove digitos, todos juntos")]
+
         public string Phone { get; set; }
         public DateTime DataCadastro { get; set; }
         public DateTime? DataAtualizacao { get; set; }

@@ -29,3 +29,7 @@ body {
     width: 30px;
     height: 31px;
 }
+
+.btn-space {
+    margin-right: 10px; 
+}

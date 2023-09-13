@@ -1,5 +1,5 @@
 ﻿using BuilderAux_MVC.Models;
-using BuilderAux_MVC.Repository;
+using BuilderAux_MVC.Repository.UserRepository;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

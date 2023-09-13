@@ -1,5 +1,5 @@
 using BuilderAux_MVC.Data;
-using BuilderAux_MVC.Repository;
+using BuilderAux_MVC.Repository.UserRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AplicationDbContext>();

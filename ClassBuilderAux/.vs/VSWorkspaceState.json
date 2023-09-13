@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\BuilderAux_MVC",
-    "\\BuilderAux_MVC\\Rotinas\\Entrada_Saida_de_Materiais",
     "\\BuilderAux_MVC\\Views"
   ],
-  "SelectedNode": "\\BuilderAux_MVC\\Views\\Shared",
+  "SelectedNode": "\\BuilderAux_MVC\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }
